@@ -31,8 +31,8 @@ total_avg_by_sector
 
 ################################################################
 # Use across to find avg, min, and max for both sectors (all time)
-sector_summary <- DATA %>%
-  group_by(sectorid) %>%
+sector_summary <- DATA |>
+  group_by(sectorid) |>
   summarise(
     across(
       .cols = price,                  
