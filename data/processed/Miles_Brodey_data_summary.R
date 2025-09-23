@@ -27,7 +27,7 @@ DATA <- readRDS(here("data", "processed", "energy_data_cleaned.Rds"))
 total_avg_by_sector <- DATA |>
   group_by(sectorid) |>
   summarise(avg_price =mean(price, na.rm = TRUE))
-avg_by_sector
+total_avg_by_sector
 
 ################################################################
 # Use across to find avg, min, and max for both sectors (all time)
